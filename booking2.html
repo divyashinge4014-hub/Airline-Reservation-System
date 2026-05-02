@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r  text-white from-slate-900 to-slate-700 min-h-screen flex items-center justify-center">
+
+  <!-- Main Card -->
+  <div class="bg-slate-800 shadow-2xl rounded-2xl p-8 w-full max-w-lg">
+
+    <h1 class="text-3xl font-bold text-center mb-6 text-white">
+      ✈️ Flight Booking
+    </h1>
+
+    <form>
+
+      <!-- Name -->
+      <label class="text-sm">Name</label>
+      <input type="text" class="w-full p-2 mb-3 rounded text-black" required>
+
+      <!-- Email -->
+      <label class="text-sm">Email</label>
+      <input type="email" class="w-full p-2 mb-3 rounded text-black" required>
+
+      <!-- From -->
+      <label class="text-sm">From</label>
+      <input type="text" class="w-full p-2 mb-3 rounded text-black" required>
+
+      <!-- To -->
+      <label class="text-sm">To</label>
+      <input type="text" class="w-full p-2 mb-3 rounded text-black" required>
+
+      <!-- Date -->
+      <label class="text-sm">Date</label>
+      <input type="date" class="w-full p-2 mb-3 rounded text-black" required>
+
+      <!-- Class -->
+      <label class="text-sm">Class</label>
+      <select class="w-full p-2 mb-4 rounded text-black">
+        <option>Economy</option>
+        <option>Business</option>
+        <option>First Class</option>
+      </select>
+
+     <!-- Age -->
+    <lable class="text-sm">Your Age</lable>
+    <select class="w-full p-2 mb-4 rounded text-black">
+    <option>Kids</option>
+    <option>Alders</option>
+    <option>Aged</option>
+      </select>
+ 
+
+      <!-- Seat Selection -->
+      <label class="text-sm">Select Seats</label>
+      <div class="grid grid-cols-4 gap-2 mb-4" id="seatContainer">
+        <button type="button" class="seat">A1</button>
+        <button type="button" class="seat">A2</button>
+        <button type="button" class="seat">A3</button>
+        <button type="button" class="seat">A4</button>
+
+        <button type="button" class="seat">B1</button>
+        <button type="button" class="seat">B2</button>
+        <button type="button" class="seat">B3</button>
+        <button type="button" class="seat">B4</button>
+      </div>
+
+      <input type="hidden" id="selectedSeats" name="selectedSeats">
+
+      <!-- Button -->
+      <button class="w-full bg-green-500 hover:bg-green-600 transition p-2 rounded font-semibold">
+    <a href="payment.html">Pay Now</a> </button>
+
+    </form>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const seats = document.querySelectorAll(".seat");
+    const selectedInput = document.getElementById("selectedSeats");
+
+    let selectedSeats = [];
+
+    seats.forEach(seat => {
+      seat.classList.add(
+        "bg-gray-300",
+        "text-black",
+        "p-2",
+        "rounded",
+        "cursor-pointer",
+        "hover:bg-gray-400",
+        "transition"
+      );
+
+      seat.addEventListener("click", () => {
+        const seatNo = seat.innerText;
+
+        if (selectedSeats.includes(seatNo)) {
+          selectedSeats = selectedSeats.filter(s => s !== seatNo);
+          seat.classList.remove("bg-green-500", "text-white");
+          seat.classList.add("bg-gray-300", "text-black");
+        } else {
+          selectedSeats.push(seatNo);
+          seat.classList.remove("bg-gray-300", "text-black");
+          seat.classList.add("bg-green-500", "text-white");
+        }
+
+        selectedInput.value = selectedSeats.join(",");
+      });
+    });
+  </script>
+
+</body>
+</html>

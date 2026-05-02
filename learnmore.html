@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airline Reservation System</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in;
+    }
+
+    .slide-up {
+      animation: slideUp 1.5s ease-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="text-center py-10 fade-in">
+    <h1 class="text-4xl font-bold">✈ Airline Reservation System</h1>
+    <p class="mt-4 text-lg">Easy Flight Booking & Management</p>
+  </header>
+
+  <!-- About Section -->
+  <section class="max-w-5xl mx-auto px-6 py-8 slide-up">
+    <h2 class="text-2xl font-semibold mb-4">About System</h2>
+    <p>
+      Airline Reservation System is a web-based application that helps users to search flights,
+      book tickets, cancel reservations, and manage bookings easily. It reduces manual work
+      and provides a smooth user experience.
+    </p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-6">
+    <div class="card bg-white/10 p-6 rounded-xl slide-up">
+      <h3 class="text-xl font-bold">🔍 Search Flights</h3>
+      <p class="mt-2">Find available flights based on source, destination, and date.</p>
+    </div>
+
+    <div class="card bg-white/10 p-6 rounded-xl slide-up">
+      <h3 class="text-xl font-bold">🎫 Book Tickets</h3>
+      <p class="mt-2">Book flight tickets easily with passenger details.</p>
+    </div>
+
+    <div class="card bg-white/10 p-6 rounded-xl slide-up">
+      <h3 class="text-xl font-bold">❌ Cancel Booking</h3>
+      <p class="mt-2">Cancel booked tickets and manage refunds.</p>
+    </div>
+
+    <div class="card bg-white/10 p-6 rounded-xl slide-up">
+      <h3 class="text-xl font-bold">📅 Flight Schedule</h3>
+      <p class="mt-2">View all flight timings and availability.</p>
+    </div>
+
+    <div class="card bg-white/10 p-6 rounded-xl slide-up">
+      <h3 class="text-xl font-bold">👤 User Login</h3>
+      <p class="mt-2">Secure login system for users and admins.</p>
+    </div>
+
+    <div class="card bg-white/10 p-6 rounded-xl slide-up">
+      <h3 class="text-xl font-bold">💬 Feedback</h3>
+      <p class="mt-2">Users can share feedback about their experience.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 fade-in">
+    <p>© 2026 Airline Reservation System | Designed by You</p>
+  </footer>
+
+</body>
+</html>

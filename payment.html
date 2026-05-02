@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #0f2027, #203a43);
+    color: white;
+}
+
+.container {
+    width: 350px;
+    margin: 80px auto;
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.details {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgreen;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h2>💳 Payment</h2>
+
+<div class="details">
+<p><b>Name:</b> <span id="name">Divya</span></p>
+<p><b>Age:</b> <span id="age">26</span></p>
+<p><b>From:</b> <span id="from">Kolhapur</span></p>
+<p><b>To:</b> <span id="to"></span>Mumbai</p>
+<p><b>Seat:</b> <span id="seat">2</span></p>
+<p><b>Amount:</b> ₹15000</p>
+</div>
+
+<button class="w-full bg-green-500 hover:bg-green-600 p-2 rounded font-semibold"><a href="tiket.html">Pay Now</a></button>
+</div>
+
+<script>
+name.innerText = localStorage.getItem("name");
+flight.innerText = localStorage.getItem("flight");
+seat.innerText = localStorage.getItem("seat");
+age.innerText = localStorage.getItem("Age");
+
+function payNow() {
+    alert("✅ Payment Successful!");
+    window.location.href = "tiket.html";
+}
+</script>
+
+</body>
+</html>

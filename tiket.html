@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ticket</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: gray;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.ticket {
+    width: 320px;
+    margin: auto;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed black;
+    text-align: left;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkorange;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+<h2>🎫 Your Ticket</h2>
+
+<div id="ticket" class="ticket">
+    <p><b>Name:</b> <span id="name"></span></p>
+    <p><b>Flight:</b> <span id="flight"></span></p>
+    <p><b>From:</b> <span id="from"></span></p>
+    <p><b>To:</b> <span id="to"></span></p>
+    <p><b>Age:</b> <span id="age"></span></p>
+    <p><b>Seat:</b> <span id="seat"></span></p>
+    <p><b>Status:</b> Confirmed ✅</p>
+</div>
+
+<button onclick="download()">Download Ticket</button>
+</div>
+
+<script>
+name.innerText = localStorage.getItem("name");
+flight.innerText = localStorage.getItem("flight");
+from.innerText = localStorage.getItem("from");
+to.innerText = localStorage.getItem("to");
+seat.innerText = localStorage.getItem("seat");
+
+function download() {
+    html2pdf().from(document.getElementById("ticket")).save("Ticket.pdf");
+}
+</script>
+
+</body>
+</html>

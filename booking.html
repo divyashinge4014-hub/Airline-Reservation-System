@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white p-6">
+
+<h1 class="text-3xl font-bold mb-6">Flight Booking</h1>
+<a href="schedule.html" class="text-blue-400">View Schedule</a>
+
+<form class="bg-slate-800 p-6 rounded-lg max-w-lg">
+  <label>Name</label>
+  <input type="text" class="w-full p-2 mb-3 text-black" required>
+
+  <label>Email</label>
+  <input type="email" class="w-full p-2 mb-3 text-black" required>
+
+  <label>From</label>
+  <input type="text" class="w-full p-2 mb-3 text-black" required>
+
+  <label>To</label>
+  <input type="text" class="w-full p-2 mb-3 text-black" required>
+
+  <label>Date</label>
+  <input type="date" class="w-full p-2 mb-3 text-black" required>
+
+  <label>Seats</label>
+  <input type="number" class="w-full p-2 mb-4 text-black" min="1">
+
+  <button class="bg-green-500 px-4 py-2 rounded">Book Flight</button>
+</form>
+
+</body>
+</html>

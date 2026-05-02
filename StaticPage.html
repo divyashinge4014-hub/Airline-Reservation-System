@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airline Reservation System</title>
+  <meta name="description" content="Java + SQLite based Airline Booking & Management System." />
+  <!-- Tailwind CDN for quick styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom tweaks */
+    .hero-bg{ background: linear-gradient(135deg,#0ea5a4 0%, #7c3aed 100%); }
+    .glass{ background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); }
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+  </style>
+</head>
+<body class="antialiased text-slate-100 bg-slate-900">
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-xl font-bold">PT</div>
+      <div>
+        <h1 class="text-xl font-semibold">Airline Reservation System</h1>
+        <p class="text-sm text-slate-400">“Your Flights, Just One Click Away.”</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex gap-6 text-slate-300">
+      <a href="#flight booking" class="hover:text-white"></a><a href="booking2.html">Flight Booking</a>      
+      <a href="#flight schedule" class="hover:text-white"></a><a href="schedule.html">Flight Schedule</a>
+      <a href="#feedback" class="hover:text-white"></a><a href="feedback.html">Feedback</a>
+      <a href="#contact" class="hover:text-white"></a><a href="cancel.html">Cancel</a>
+      <a href="#contact" class="hover:text-white"></a><a href="contact.html">Contact Us</a>
+      <a href="#view booking" class="hover:text-white"></a><a href="http://localhost/airline_project/view_bookings.php">View_Bookings</a>
+      <a href="#Tickets" class="hover:text-white"></a><a href="file:///C:/xampp/htdocs/Airline_project/tiket.html">Tickets</a>
+
+    </nav>
+     </header>
+
+  <!-- Hero -->
+  <section class="hero-bg py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-extrabold mb-4">Airline Reservation System</h2>
+        <p class="text-slate-100/90 mb-6">“Your Flights, Just One Click Away” reflects the system’s goal of making flight booking fast, simple, and convenient.<br>
+             With an easy-to-use interface, users can quickly search flights, check availability, book tickets, and manage their reservations—all with minimal steps. <br>
+            The system removes complexity and delivers a smooth, hassle-free booking experience.</p>
+        <div class="flex gap-3">
+          <a href="#learnmore" class="px-5 py-3 border border-white/10 rounded-md font-medium"></a><a href="learnmore.html">Explor more</a>
+        </div>
+        <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-slate-200/80">
+          <li>✅ Clean UI</li>
+          <li>✅ Fast & lightweight</li>
+          <li>✅ Easy to deploy</li>
+          <li>✅ Mobile responsive</li>
+        </ul>
+      </div>
+
+      <div class="p-6 glass rounded-2xl shadow-lg">
+        <div class="h-64 bg-gradient-to-br from-white/6 to-white/3 rounded-xl flex items-center justify-center">
+          <!-- Placeholder for screenshot or illustration -->
+          <div class="h-64 bg-gradient-to-br from-white/6 to-white/3 rounded-xl flex items-center justify-center">
+<img src="C:/Users/Administrator/Downloads/Yoyo Airlines Logo.png" alt="User Profile" class="w-full h-full object-cover">
+</div>
+          <div class="text-center text-slate-200/70">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- Screenshots -->
+
+  <section id="screenshots" class="max-w-6xl mx-auto px-6 py-8">
+<div class="slider">
+        <div class="slide-track">
+ <h2 class="font-semibold text-lg">Booking Management</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="h-40 rounded-lg bg-white/6 flex items-center justify-center">
+<img src="C:/xampp/htdocs/Airline_project/images/adminmenu.png" alt="User Profile" class="w-full h-full object-cover"></img>
+</div>
+      <div class="h-40 rounded-lg bg-white/6 flex items-center justify-center">
+<img src="C:/xampp/htdocs/Airline_project/images/Screenshot (5).png" alt="User Profile" class="w-full h-full object-cover">
+</div>
+      <div class="h-40 rounded-lg bg-white/6 flex items-center justify-center">
+<img src="C:/xampp/htdocs/Airline_project/images/Screenshot (6).png" alt="User Profile" class="w-full h-full object-cover">
+</div>
+      <div class="h-40 rounded-lg bg-white/6 flex items-center justify-center">
+<img src="C:/xampp/htdocs/Airline_project/images/Screenshot (7).png" alt="User Profile" class="w-full h-full object-cover">
+</div>
+      <div class="h-40 rounded-lg bg-white/6 flex items-center justify-center">
+<img src="C:/Users/Administrator/OneDrive/Pictures/Screenshots/Screenshot (13).png" alt="User Profile" class="w-full h-full object-cover">
+</div>
+
+  </section>
+
+  
+    <!-- Contact -->
+  <!-- Contact / Footer -->
+  <footer id="contact" class="max-w-6xl mx-auto px-6 py-12 border-t border-slate-800/60">
+    <div class="md:flex md:justify-between items-center">
+      <div>
+        <h4 class="font-semibold">CONTACT</h4>
+        <p class="text-slate-400 text-sm">Author / Team Name — <a href="mailto:you@example.com" class="underline">Airlinereservationsystem@gmail.com</a></p>
+      </div>
+      <div class="mt-6 md:mt-0 text-sm text-slate-400">© <span id="year"></span> PROJECT_TITLE. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // small script to update placeholders
+    document.title = document.title.replace('PROJECT_TITLE', 'Your Project Name');
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // you can programmatically replace other placeholders if you prefer
+  </script>
+</body>
+</html>
